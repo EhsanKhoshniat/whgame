@@ -67,7 +67,5 @@ for player in players:
 	wholist.remove(who)
 	whatlist.remove(what)
 	wherelist.remove(where)
-# for player in players:
-# 	if when not in sentece and who not in sentece and what not in sentece and where not in sentece:
-# 		print sentece
+
 
