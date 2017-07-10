@@ -1,3 +1,5 @@
+import random
+
 print "Welcome to WH game!"
 print "It's so simple, you're gonna answer my questions and at the end get silly sentences."
 print "First, tell me how many people are playing this game?"
@@ -21,6 +23,7 @@ for i in range(1, player_count + 1):
 	i += 1
 
 print "Good job! Now let's ask players about time."
+
 
 whenlist = []
 for player in players:
@@ -54,6 +57,17 @@ for player in players:
 print "Ok , now let's see the resaults:"
 
 for player in players:
-	print "%s, %s and %s was %s at %s " % (when, who, player, what, where)
-
+	when = random.choice(whenlist)
+	who = random.choice(wholist)
+	what = random.choice(whatlist)
+	where = random.choice(wherelist)
+	sentece = "%s, %s and %s were %s %s " % (when, who, player, what, where)
+	print sentece
+	whenlist.remove(when)
+	wholist.remove(who)
+	whatlist.remove(what)
+	wherelist.remove(where)
+# for player in players:
+# 	if when not in sentece and who not in sentece and what not in sentece and where not in sentece:
+# 		print sentece
 
